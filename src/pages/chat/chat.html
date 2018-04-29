@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9>
+        <ion-item id="msg-box-wrapper">
+          <textarea #myInput id="myInput" rows="1" maxLength="120" (keyup)="resize()" [(ngModel)]="message"></textarea>
+        </ion-item>
+      </ion-col>
+
+      <button ion-button clear medium id="chat-send-btn" (click)="sendMessage()">Send</button>      
+    </ion-row>
+  </ion-grid>
+</ion-footer>

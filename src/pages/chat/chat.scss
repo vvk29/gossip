@@ -1,0 +1,25 @@
+page-chat {
+
+   #msg-box-wrapper {
+      border: 1px solid gray;
+   }
+
+   #myInput {
+     width: calc(100% - 10px);
+     border: 0;
+     border-radius: 0;
+     background: transparent;
+   }
+
+   textarea {
+     resize: none;
+     overflow: hidden;
+   }
+
+   #chat-send-btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+   }
+
+}

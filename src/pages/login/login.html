@@ -1,0 +1,41 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+  <div class="top-img-container">
+    <img src="assets/images/start-img.png" alt="Logo">
+  </div>
+  <div class="form-container">
+    <form [formGroup]="loginForm" novalidate>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label floating>Email</ion-label>          
+          <ion-input type="email" formControlName="email" [(ngModel)]="user.email" (input)="clearErrors()"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>          
+          <ion-input type="password" formControlName="password" [(ngModel)]="user.password" (input)="clearErrors()"></ion-input>
+        </ion-item>
+        
+      </ion-list>
+      <div class="error-message" *ngIf="returnInvalid">
+        Unable to Login, please check credentials provided
+      </div>
+    </form>
+
+    <div class="go-signup-btn">
+      <h5 tappable (click)="goToSignUpPage()">New User? Sign Up</h5>
+      <div class="error-msg" *ngIf="invalidForm">Login credentials Invalid</div>      
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <button ion-button type="submit" block class="login-btn" (click)="loginUser()">Login</button>
+</ion-footer>

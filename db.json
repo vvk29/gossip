@@ -1,0 +1,14 @@
+{
+   "chats": {
+      "chatId": {
+         "senderId": {
+            "sender": "string",
+            "receiver": "string",
+            "messageData": {
+               "message": "string",
+               "sentAt": "timestamp"
+            }
+         }
+      }
+   }
+}

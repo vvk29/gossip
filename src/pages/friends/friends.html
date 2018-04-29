@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Friends</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div *ngIf="friends.length > 0">
+		<ion-list>
+			<ion-item *ngFor="let friend of friends" tappable (click)="goToChat(friend)">
+				<ion-avatar item-start>
+					<img src="{{ friend.profileImg }}">
+				</ion-avatar>
+				<h2>{{ friend.firstName }} {{ friend.lastName }}</h2>
+				<!-- <p>Ugh. As if.</p> -->
+			</ion-item>
+		</ion-list>
+	</div>
+	
+	<div *ngIf="friends.length == 0" class="no-friends">		
+		<h2>No Friends Yet!</h2>
+		<button ion-button medium clear (click)="addFriends()">Add Now</button>
+	</div>
+
+	
+</ion-content>

@@ -1,0 +1,19 @@
+page-signup {
+   .form-container {
+     position: relative;
+     top: 5%;
+   }
+
+   ion-input {
+     border-bottom: 1px solid gray;
+   }
+
+   .signup-btn {
+      background: linear-gradient(to right, #fc466b, #3f5efb);
+      margin-bottom: 0;
+   }
+
+   .error-msg {
+     color: color($colors, danger);
+   }
+}
